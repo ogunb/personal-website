@@ -22,22 +22,12 @@
 }
 .hero__name__letter {
 	display: inline-block;
-	transition: transform 1.5s var(--snap);
+	transition: transform 2s var(--snap);
 	cursor: default;
 }
 .hero__name__letter:hover {
 	transform: translateY(20px);
 }
-.hero__occupation {
-	transform: scale(0.8);
-	color: var(--light);
-	background: var(--dark);
-	padding: 1.5rem;
-	padding-right: 7rem;
-	margin-left: -15rem;
-	margin-bottom: -10rem;
-}
-
 .hero__bottom {
 	display: flex;
 	flex-direction: column;

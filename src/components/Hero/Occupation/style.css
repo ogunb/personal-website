@@ -1,0 +1,13 @@
+.hero__occupation {
+	transform: scale(0.8);
+	transition: transform 500ms var(--snap);
+	color: var(--light);
+	background: var(--dark);
+	padding: 1.5rem;
+	padding-right: 6rem;
+	margin-left: -15rem;
+	margin-bottom: -10rem;
+}
+.hero__occupation:hover {
+	transform: scale(0.85);
+}
