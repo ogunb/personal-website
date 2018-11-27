@@ -1,10 +1,9 @@
 import { h } from 'preact';
-// import style from './style';
+import style from './style';
+import Icons from '../../assets/icons';
 
 const Social = () => (
-	<div>
-		<div>social</div>
-	</div>
+	<div class={style.social}>{Icons.map(icon => icon())}</div>
 );
 
 export default Social;

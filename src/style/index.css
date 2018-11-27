@@ -1,6 +1,5 @@
 :root {
 	--light: #fff;
-	--gray: ##c4c4c4;
 	--dark: #000;
 	--darker: #000;
 	--snap: cubic-bezier(0.06, 0.975, 0.195, 0.985);

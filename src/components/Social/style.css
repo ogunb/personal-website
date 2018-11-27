@@ -1,0 +1,15 @@
+.social {
+	display: flex;
+	justify-content: center;
+}
+.social svg {
+	width: 37px;
+	height: 37px;
+	fill: #c4c4c4;
+	margin: 1rem 1rem;
+	transition: fill 2s var(--snap);
+	cursor: pointer;
+}
+.social svg:hover {
+	fill: #000;
+}
