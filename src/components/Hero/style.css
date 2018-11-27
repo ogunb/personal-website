@@ -17,21 +17,25 @@
 }
 .hero__name {
 	font-family: 'Special Elite', cursive;
-	transform: rotate(-15deg);
+	transform: rotate(-15deg) translateY(0);
 	font-size: 13rem;
+}
+.hero__name__letter {
+	display: inline-block;
+	transition: transform 1.5s var(--snap);
+	cursor: default;
+}
+.hero__name__letter:hover {
+	transform: translateY(20px);
 }
 .hero__occupation {
 	transform: scale(0.8);
-	transition: transform 500ms var(--snap);
 	color: var(--light);
 	background: var(--dark);
 	padding: 1.5rem;
-	padding-right: 6rem;
+	padding-right: 7rem;
 	margin-left: -15rem;
 	margin-bottom: -10rem;
-}
-.hero__occupation:hover {
-	transform: scale(0.9);
 }
 
 .hero__bottom {

@@ -4,12 +4,21 @@ import style from './style';
 import Social from '../Social';
 
 const Hero = () => {
+	const heroName = 'ogün'.split('');
+	const heroSurname = 'babacan'.split('');
 	const heroActions = `{ type: 'FRONT_END', payload: 'react' }`;
+	console.log(style);
 	return (
 		<div class={style.hero}>
 			<div class={style.hero__top}>
 				<h1 class={style.hero__name}>
-					ogün <br /> babacan
+					{heroName.map(letter => (
+						<span class={style.hero__name__letter}>{letter}</span>
+					))}
+					<br />
+					{heroSurname.map(letter => (
+						<span class={style.hero__name__letter}>{letter}</span>
+					))}
 				</h1>
 				<div class={style.hero__occupation}>
 					<h2>javascript</h2>
