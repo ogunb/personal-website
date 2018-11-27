@@ -33,3 +33,32 @@
 	flex-direction: column;
 	text-align: center;
 }
+.hero__bottom p {
+	margin-top: 0;
+}
+
+@media screen and (max-width: 940px) {
+	.hero__name {
+		font-size: 10rem;
+	}
+}
+@media screen and (max-width: 815px) {
+	.hero__name {
+		font-size: 8rem;
+	}
+}
+@media screen and (max-width: 815px) {
+	.hero__top {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.hero__name {
+		transform: none;
+	}
+}
+@media screen and (max-width: 340px) {
+	.hero__name {
+		font-size: 6.5rem;
+	}
+}
