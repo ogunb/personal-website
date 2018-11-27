@@ -1,0 +1,41 @@
+.hero {
+	background: url(../../assets/hero-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: 100%;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.hero__top {
+	display: flex;
+	align-items: flex-end;
+}
+.hero__name {
+	font-family: 'Special Elite', cursive;
+	transform: rotate(-15deg);
+	font-size: 13rem;
+}
+.hero__occupation {
+	transform: scale(0.8);
+	transition: transform 500ms var(--snap);
+	color: var(--light);
+	background: var(--dark);
+	padding: 1.5rem;
+	padding-right: 6rem;
+	margin-left: -15rem;
+	margin-bottom: -10rem;
+}
+.hero__occupation:hover {
+	transform: scale(0.9);
+}
+
+.hero__bottom {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}

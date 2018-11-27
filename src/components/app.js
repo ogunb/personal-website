@@ -1,9 +1,9 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
-import HomeRouter from '../routes/HomeRouter';
+import Hero from './Hero';
 
-export default class App extends Component {
+class App extends Component {
 	handleRoute = e => {
 		this.currentUrl = e.url;
 	};
@@ -12,9 +12,11 @@ export default class App extends Component {
 		return (
 			<div id="app">
 				<Router onChange={this.handleRoute}>
-					<HomeRouter path="/" />
+					<Hero path="/" />
 				</Router>
 			</div>
 		);
 	}
 }
+
+export default App;
