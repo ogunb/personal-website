@@ -45,16 +45,17 @@
 @media screen and (max-width: 815px) {
 	.hero__name {
 		font-size: 8rem;
+		transform: none;
 	}
-}
-@media screen and (max-width: 815px) {
 	.hero__top {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
-	.hero__name {
-		transform: none;
+}
+@media screen and (max-width: 680px) {
+	.hero__bottom {
+		margin-top: -20vh;
 	}
 }
 @media screen and (max-width: 340px) {
