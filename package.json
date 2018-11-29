@@ -7,9 +7,7 @@
 		"start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
 		"build": "preact build",
 		"serve": "preact build && preact serve",
-		"dev": "preact watch",
-		"lint": "eslint src",
-		"test": "jest"
+		"dev": "preact watch"
 	},
 	"eslintIgnore": [
 		"build/*"
@@ -17,11 +15,9 @@
 	"devDependencies": {
 		"eslint": "^4.9.0",
 		"if-env": "^1.0.0",
-		"preact-cli": "^2.1.0",
-		"preact-render-spy": "^1.2.1"
+		"preact-cli": "^2.1.0"
 	},
 	"dependencies": {
-		"preact": "^8.2.6",
-		"preact-router": "^2.5.7"
+		"preact": "^8.2.6"
 	}
 }
