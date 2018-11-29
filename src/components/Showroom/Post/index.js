@@ -8,8 +8,7 @@ class Post extends Component {
   /* eslint-disable */
 	state = {
 		post: null,
-		isOpen: false,
-		loading: true
+		isOpen: false
 	};
 
 	/* eslint-enable */
@@ -19,16 +18,16 @@ class Post extends Component {
     const post = await import(`./postContent/${id}`).then(body => body.default);
     this.setState({
       post,
-      loading: false,
     });
   };
 
   closePostBody = () => {
-    this.setState({ isOpen: false, loading: true });
+    this.setState({ isOpen: false });
   };
 
   renderButton() {
     const { isOpen } = this.state;
+
     let button;
     if (!isOpen) {
       button = (
@@ -53,15 +52,14 @@ class Post extends Component {
         </button>
       );
     }
+
     return button;
   }
 
   renderBody() {
-    const { isOpen, post, loading } = this.state;
-    if (isOpen && loading) {
-      return <p>Loading...</p>;
-    }
-    if (isOpen && !loading) {
+    const { isOpen, post } = this.state;
+
+    if (isOpen) {
       return (
         <div className={markdownStyle.showroom__post__body}>
           <Markdown markdown={post} />
@@ -70,7 +68,7 @@ class Post extends Component {
     }
   }
   /* eslint-disable-next-line */
-	render({ title, subtitle, id }, { isOpen, loading, post }) {
+	render({ title, subtitle, id }, { isOpen, post }) {
     return (
       <div
         className={`${style.showroom__post} ${
