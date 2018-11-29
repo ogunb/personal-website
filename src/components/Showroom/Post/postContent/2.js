@@ -1,6 +1,6 @@
-const reccursion = `There are a lot of alien words for us non-Computer Science graduates out there. If you are like me, chances are you were intimidated by how mouthful they are. In this blog post, we’ll cover Recursion, and strip that f\*cker to it’s simplest form.
+const recursion = `There are a lot of alien words for us non-Computer Science graduates out there. If you are like me, chances are you were intimidated by how mouthful they are. In this blog post, we’ll cover Recursion, and strip that f\*cker to it’s simplest form.
 
-_Note that you can find the sources utilized in this blog post at the bottom of the page. It’s always better to have unfiltered information, so go check them out too if you like._ ~\_
+_Note that you can find the sources utilized in this blog post at the bottom of the page. It’s always better to have unfiltered information, so go check them out too if you like._
 
 Recursion, what the f\*ck is that even mean? Is this English? It is basically a function, calling itself. Kind of like a loop — very much like a loop. Well, I never can fully grasp something before I see it:
 
@@ -72,13 +72,13 @@ This might seem confusing at first, so let’s go through our call stack with fa
 
 > [ factorial(1) ] → Fifth Call: Since it’s less than 2, it resolves itself and pops out of the stack, returning 1.
 >
-> [ factorial(2) ] → Forth Call: With the resolved “factorial(num — 1)” call, now the “num _ factorial(num — 1)” operation is equal to “2 _ 1”, thus resolving and returning 2.
+> [ factorial(2) ] → Forth Call: With the resolved “factorial(num — 1)” call, now the “num - factorial(num — 1)” operation is equal to “2 - 1”, thus resolving and returning 2.
 >
-> [ factorial(3) ] → Third Call: Same thing with this too, “num _ factorial(num — 1)” : “3 _ 2 = 6”
+> [ factorial(3) ] → Third Call: Same thing with this too, “num - factorial(num — 1)” : “3 - 2 = 6”
 >
-> [ factorial(4) ] → Second Call => 4 \_ 6 = 24
+> [ factorial(4) ] → Second Call => 4 - 6 = 24
 >
-> [ factorial(5) ] → First Call will yield the result of 5 \_ 24, which is 120.
+> [ factorial(5) ] → First Call will yield the result of 5 - 24, which is 120.
 >
 > _see live here: [https://codepen.io/ogunb/pen/jQbGrv](CodePen/ogunb))_
 
@@ -86,4 +86,4 @@ This might seem confusing at first, so let’s go through our call stack with fa
 
 You’re probably saying: “Everything you’ve said, I could do with basic loops.” Exactly. Recursion is basically a loop. The important thing here, sometimes loops can be confusing to look at and read, and sometimes it can be easier and more readable to write it with recursion. Also recursion is very powerful with _“Lexical Scope”_ Whatever is more readable and easier to implement, choose that. Your future-self and your code maintainers will thank you.`;
 
-export default reccursion;
+export default recursion;

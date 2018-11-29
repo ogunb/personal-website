@@ -22,13 +22,14 @@ class Showroom extends Component {
 	render({}, { posts }) {
     return (
       <div className={style.showroom}>
-        <div className={style.showroom__subtitle}>
+        <div className={style.showroom__title}>
           <p>
             this is the showroom: <em>(might have)</em> / has blog posts,
             projects etc.
           </p>
           <p>mostly things on my gitHub are here as well.</p>
         </div>
+        <h3 className={style.showroom__aboutPage}>learn more about me</h3>
         <div className={style.showroom__posts}>
           {posts.map(post => (
             <Post

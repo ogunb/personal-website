@@ -1,11 +1,3 @@
-.showroom__post__body {
-	grid-column: 1 / 4;
-	line-height: 2.5;
-	padding: 0 10%;
-}
-.showroom__post__body * {
-	font-size: 1.3rem;
-}
 .showroom__post__body a {
 	color: #4183c4;
 	text-decoration: none;

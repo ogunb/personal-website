@@ -1,8 +1,18 @@
 .showroom {
 	margin: 8rem 0;
+	position: relative;
+	overflow: hidden;
 }
-.showroom__subtitle {
+.showroom__title {
 	text-align: center;
+}
+.showroom__aboutPage {
+	cursor: pointer;
+	font-family: 'Special Elite';
+	position: absolute;
+	top: 50%;
+	right: -170px;
+	transform: rotate(-90deg);
 }
 .showroom__posts {
 	margin-top: 6rem;

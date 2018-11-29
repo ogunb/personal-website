@@ -1,7 +1,7 @@
 .hero {
 	background: url(../../assets/hero-bg.jpg);
 	background-repeat: no-repeat;
-	background-position: bottom left;
+	background-position: 100% 102%;
 	background-size: 100%;
 	position: relative;
 	height: 100vh;

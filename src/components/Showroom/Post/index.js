@@ -13,11 +13,11 @@ class Post extends Component {
 
 	/* eslint-enable */
   getPostBody = async () => {
-    this.setState({ isOpen: true });
     const { id } = this.props;
     const post = await import(`./postContent/${id}`).then(body => body.default);
     this.setState({
       post,
+      isOpen: true,
     });
   };
 
@@ -58,14 +58,24 @@ class Post extends Component {
 
   renderBody() {
     const { isOpen, post } = this.state;
-
     if (isOpen) {
       return (
-        <div className={markdownStyle.showroom__post__body}>
+        <div
+          className={`${markdownStyle.showroom__post__body} ${
+            style.showroom__post__body
+          }`}
+        >
           <Markdown markdown={post} />
         </div>
       );
     }
+    return (
+      <div
+        className={`${markdownStyle.showroom__post__body} ${
+          style.showroom__post__body
+        }`}
+      />
+    );
   }
   /* eslint-disable-next-line */
 	render({ title, subtitle, id }, { isOpen, post }) {
