@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-
 import Hero from './Hero';
 
 class App extends Component {
