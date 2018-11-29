@@ -32,8 +32,8 @@ class Showroom extends Component {
         <div className={style.showroom__posts}>
           {posts.map(post => (
             <Post
-              key={posts.id}
-              id={posts.id}
+              key={post.id}
+              id={post.id}
               title={post.title}
               subtitle={post.subtitle}
               body={post.body}

@@ -17,6 +17,7 @@
 		"preact-cli": "^2.1.0"
 	},
 	"dependencies": {
-		"preact": "^8.2.6"
+		"preact": "^8.2.6",
+		"preact-markdown": "^0.4.1"
 	}
 }
