@@ -58,8 +58,13 @@
 		margin-top: -20vh;
 	}
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 355px) {
 	.hero__name {
 		font-size: 6.5rem;
+	}
+}
+@media screen and (max-width: 300px) {
+	.hero__name {
+		font-size: 5rem;
 	}
 }

@@ -29,7 +29,6 @@ class Showroom extends Component {
           </p>
           <p>mostly things on my gitHub are here as well.</p>
         </div>
-        <h3 className={style.showroom__aboutPage}>learn more about me</h3>
         <div className={style.showroom__posts}>
           {posts.map(post => (
             <Post
@@ -41,6 +40,7 @@ class Showroom extends Component {
             />
           ))}
         </div>
+        <h3 className={style.showroom__aboutPage}>learn more about me</h3>
       </div>
     );
   }

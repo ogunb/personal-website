@@ -25,7 +25,7 @@
 	margin-bottom: -0.8rem;
 }
 .showroom__post__button {
-	height: 8rem;
+	height: 100%;
 	background: var(--dark);
 	color: var(--light);
 	border: none;
@@ -33,6 +33,7 @@
 	transition: letter-spacing 2s var(--snap);
 	cursor: pointer;
 	margin-right: -4px;
+	float: right;
 }
 .showroom__post__button_open {
 	letter-spacing: -1.4rem;
@@ -49,4 +50,14 @@
 }
 .showroom__post__body * {
 	font-size: 1.3rem;
+}
+@media screen and (max-width: 825px) {
+	.showroom__post {
+		grid-template-columns: 14rem auto 8rem;
+	}
+}
+@media screen and (max-width: 505px) {
+	.showroom__post {
+		grid-template-columns: 11rem auto 5rem;
+	}
 }
