@@ -251,6 +251,10 @@ small {
 	line-height: 1.2;
 }
 
+em {
+	font-style: italic;
+}
+
 p {
 	margin: 20px 0;
 	font-weight: 400;

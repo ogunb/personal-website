@@ -13,7 +13,6 @@
 		"build/*"
 	],
 	"devDependencies": {
-		"eslint": "^4.9.0",
 		"if-env": "^1.0.0",
 		"preact-cli": "^2.1.0"
 	},

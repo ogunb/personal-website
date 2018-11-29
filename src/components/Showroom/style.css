@@ -1,0 +1,13 @@
+.showroom {
+	margin: 8rem 0;
+}
+.showroom__subtitle {
+	text-align: center;
+}
+.showroom__posts {
+	margin-top: 6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
