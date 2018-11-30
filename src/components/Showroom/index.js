@@ -18,13 +18,18 @@ class Showroom extends Component {
 			posts
     });
   }
+
+  handleOpenAbout = () => {
+    this.props.openAbout();
+  };
+
   // eslint-disable-next-line
 	render({}, { posts }) {
     return (
       <div className={style.showroom}>
         <div className={style.showroom__title}>
           <p>
-            this is the showroom: <em>(might have)</em> / has blog posts,
+            this is the showroom has / <em>(might have)</em> blog posts,
             projects etc.
           </p>
           <p>mostly things on my gitHub are here as well.</p>
@@ -40,7 +45,12 @@ class Showroom extends Component {
             />
           ))}
         </div>
-        <h3 className={style.showroom__aboutPage}>learn more about me</h3>
+        <h3
+          className={style.showroom__aboutPage}
+          onClick={this.handleOpenAbout}
+        >
+          learn more about me
+        </h3>
       </div>
     );
   }
