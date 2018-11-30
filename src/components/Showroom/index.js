@@ -20,13 +20,15 @@ class Showroom extends Component {
   }
 
   handleOpenAbout = () => {
-    this.props.openAbout();
+    this.learnButton.style.color = 'var(--light)';
+    this.learnButton.style.transform = 'rotate(-90deg) translateY(-10px)';
+    this.props.openAbout(this.learnButton);
   };
 
   // eslint-disable-next-line
 	render({}, { posts }) {
     return (
-      <div className={style.showroom}>
+      <section className={style.showroom}>
         <div className={style.showroom__title}>
           <p>
             this is the showroom has / <em>(might have)</em> blog posts,
@@ -49,10 +51,11 @@ class Showroom extends Component {
           type="button"
           className={style.showroom__aboutPage}
           onClick={this.handleOpenAbout}
+          ref={learnButton => (this.learnButton = learnButton)}
         >
           learn more about me
         </button>
-      </div>
+      </section>
     );
   }
 }

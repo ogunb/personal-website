@@ -27,7 +27,9 @@ class Post extends Component {
 
   renderButton() {
     const { isOpen } = this.state;
-
+    //! HOVER EFFECT
+    //! HOVER EFFECT
+    //! HOVER EFFECT
     let button;
     if (!isOpen) {
       button = (

@@ -7,13 +7,16 @@ import Footer from './footer';
 class App extends Component {
   state = {
     isAboutOpen: false,
+    learnButton: null,
   };
 
-  openAbout = () => {
-    this.setState({ isAboutOpen: true });
+  openAbout = learnButton => {
+    this.setState({ isAboutOpen: true, learnButton });
   };
 
   closeAbout = () => {
+    const { learnButton } = this.state;
+    learnButton.removeAttribute('style');
     this.setState({ isAboutOpen: false });
   };
 
@@ -22,9 +25,9 @@ class App extends Component {
     return (
       <div id="app">
         <Hero />
+        {isAboutOpen ? <About closeAbout={this.closeAbout} /> : null}
         <Showroom openAbout={this.openAbout} />
         <Footer />
-        {isAboutOpen ? <About closeAbout={this.closeAbout} /> : null}
       </div>
     );
   }

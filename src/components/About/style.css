@@ -1,0 +1,45 @@
+.about {
+	position: fixed;
+	width: 75vw;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	height: 100vh;
+	background: var(--dark);
+	color: var(--light);
+	animation: slideIn 2s var(--snap) forwards;
+	transform: translateX(100%);
+	padding: 6% 15% 15% 8%;
+	box-sizing: border-box;
+	line-height: 2;
+}
+.about__title {
+	font-family: 'Special Elite';
+}
+.about__paragraph p {
+	font-size: 1.2rem;
+}
+.about__close {
+	position: absolute;
+	top: 5%;
+	right: 13%;
+	background: none;
+	font-size: 4rem;
+	border: none;
+	color: var(--light);
+	cursor: pointer;
+}
+.about__contact p {
+	margin-bottom: 0;
+}
+.about__contact a {
+	color: var(--light);
+}
+@keyframes slideIn {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}

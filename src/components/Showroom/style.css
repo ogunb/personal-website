@@ -17,6 +17,8 @@
 	font-size: 3.2rem;
 	background: none;
 	border: none;
+	z-index: 5;
+	outline: 0; /* shouldn't've don dis. */
 }
 .showroom__aboutPage:hover {
 	transform: rotate(-90deg) translateY(-10px);
