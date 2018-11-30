@@ -1,7 +1,7 @@
 :root {
 	--light: #fff;
 	--dark: #000;
-	--darker: #000;
+	--gray: #c4c4c4;
 	--snap: cubic-bezier(0.06, 0.975, 0.195, 0.985);
 	font-family: 'Roboto Mono', monospace;
 	font-size: 62.5%;
@@ -260,6 +260,6 @@ a {
 	margin: 20px 0;
 	font-weight: 400;
 	font-size: 1.6rem;
-	text-decoration: none;
+	/* text-decoration: none; */
 	color: var(--dark);
 }

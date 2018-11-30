@@ -1,0 +1,19 @@
+.footer {
+	background: var(--dark);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 0.75rem 0;
+}
+.footer * {
+	margin: 0 1rem;
+}
+.footer svg {
+	width: 20px;
+	height: 20px;
+}
+.footer__mail {
+	color: var(--gray);
+	font-size: 1.2rem;
+}

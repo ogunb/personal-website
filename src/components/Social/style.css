@@ -3,8 +3,8 @@
 	justify-content: center;
 }
 .social svg {
-	width: 37px;
-	height: 37px;
+	width: 30px;
+	height: 30px;
 	fill: #c4c4c4;
 	margin: 1rem 1rem;
 	transition: fill 2s var(--snap);

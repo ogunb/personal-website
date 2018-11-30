@@ -45,12 +45,13 @@ class Showroom extends Component {
             />
           ))}
         </div>
-        <h3
+        <button
+          type="button"
           className={style.showroom__aboutPage}
           onClick={this.handleOpenAbout}
         >
           learn more about me
-        </h3>
+        </button>
       </div>
     );
   }

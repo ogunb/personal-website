@@ -1,5 +1,5 @@
 .showroom {
-	margin: 8rem 0;
+	margin: 8rem 0 9rem 0;
 	position: relative;
 	overflow: hidden;
 }
@@ -13,6 +13,13 @@
 	top: 50%;
 	right: -170px;
 	transform: rotate(-90deg);
+	transition: transform 2s var(--snap);
+	font-size: 3.2rem;
+	background: none;
+	border: none;
+}
+.showroom__aboutPage:hover {
+	transform: rotate(-90deg) translateY(-10px);
 }
 .showroom__posts {
 	margin-top: 6rem;
