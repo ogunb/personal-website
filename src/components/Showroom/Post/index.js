@@ -5,21 +5,18 @@ import style from './style.css';
 import markdownStyle from './markdown.css';
 
 class Post extends Component {
-  /* eslint-disable */
-	state = {
-		post: null,
-		isOpen: false
-	};
+  state = {
+    post: null,
+    isOpen: false,
+  };
 
-	/* eslint-enable */
-  getPostBody = async () => {
-    const { id } = this.props;
+  async getPostBody(id) {
     const post = await import(`./postContent/${id}`).then(body => body.default);
     this.setState({
       post,
       isOpen: true,
     });
-  };
+  }
 
   closePostBody = () => {
     this.setState({ isOpen: false });
@@ -35,7 +32,7 @@ class Post extends Component {
       button = (
         <button
           type="button"
-          onClick={this.getPostBody}
+          onClick={() => this.getPostBody(this.props.id)}
           className={style.showroom__post__button}
         >
           \/

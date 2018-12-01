@@ -2,11 +2,13 @@
 	display: flex;
 	justify-content: center;
 }
+.social a {
+	margin: 1rem 1rem;
+}
 .social svg {
 	width: 30px;
 	height: 30px;
 	fill: #c4c4c4;
-	margin: 1rem 1rem;
 	transition: fill 2s var(--snap);
 	cursor: pointer;
 }

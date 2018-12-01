@@ -14,7 +14,8 @@
 	],
 	"devDependencies": {
 		"if-env": "^1.0.0",
-		"preact-cli": "^2.1.0"
+		"preact-cli": "^2.1.0",
+		"preact-cli-plugin-fast-async": "^1.0.1"
 	},
 	"dependencies": {
 		"preact": "^8.2.6",

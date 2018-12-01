@@ -3,7 +3,7 @@ import style from './style';
 import Icons from '../../assets/icons';
 
 const Social = () => (
-	<div class={style.social}>{Icons.map(icon => icon())}</div>
+  <div className={style.social}>{Icons.map(icon => icon())}</div>
 );
 
 export default Social;
