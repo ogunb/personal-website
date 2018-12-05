@@ -33,12 +33,16 @@
 
 @media screen and (max-width: 1075px) {
 	.showroom__aboutPage {
+		display: block;
 		position: relative;
-		transform: rotate(0);
+		transform: none;
 		right: 0;
 		top: 0;
-		margin-top: 2rem;
-		text-align: center;
+		margin: 2rem auto 0 auto;
+		z-index: 0;
+	}
+	.showroom__aboutPage:hover {
+		transform: none;
 	}
 	.showroom {
 		padding: 0 3%;

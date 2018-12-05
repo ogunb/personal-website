@@ -34,10 +34,15 @@
 	color: var(--light);
 	border: none;
 	font-size: 4.7rem;
-	transition: letter-spacing 2s var(--snap);
+	transition: letter-spacing 2s var(--snap), transform 2s var(--snap);
 	cursor: pointer;
 	margin-right: -4px;
 	float: right;
+	box-shadow: 0 -3px 0 0 var(--dark);
+}
+.showroom__post__button:hover {
+	box-shadow: 0 -3px 0 0 var(--dark);
+	transform: translateY(3px);
 }
 .showroom__post__button_open {
 	letter-spacing: -1.4rem;

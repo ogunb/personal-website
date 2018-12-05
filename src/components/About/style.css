@@ -1,6 +1,6 @@
 .about {
 	position: fixed;
-	width: 75vw;
+	max-width: 75vw;
 	right: 0;
 	top: 0;
 	z-index: 1;
@@ -41,5 +41,10 @@
 	}
 	to {
 		transform: translateX(0%);
+	}
+}
+@media screen and (max-width: 1000px) {
+	.about {
+		max-width: 100%;
 	}
 }

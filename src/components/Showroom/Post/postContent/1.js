@@ -3,7 +3,7 @@ const sleepy = `![sleepy](https://raw.githubusercontent.com/ogunb/sleepy/master/
 ## **sleepy💤**
 
 sleepy is a sleep-cycle calculator.
-[Live Demo](https://ogunb.github.io/sleepy/dist/)
+[git Repo](https://github.com/ogunb/sleepy/)
 
 ### **What is a sleep cycle?**
 

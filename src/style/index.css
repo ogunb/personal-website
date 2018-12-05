@@ -6,6 +6,14 @@
 	font-family: 'Roboto Mono', monospace;
 	font-size: 62.5%;
 }
+::-moz-selection {
+	color: #fff;
+	background: #000;
+}
+::selection {
+	color: #fff;
+	background: #000;
+}
 
 /* SPECIAL ELITE */
 @font-face {

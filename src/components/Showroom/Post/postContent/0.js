@@ -6,6 +6,6 @@ I designed and developed front-end of the Rennie RPG's landing page, user/game p
 
 Anyone can have the source files, as they are just prototypes and don't include any sensitive information.
 
-[Live Protoype](https://ogunb.github.io/rennie-landing/dist/index.html)`;
+[git Repo](https://github.com/ogunb/rennie-landing)`;
 
 export default rennie;
