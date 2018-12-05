@@ -1,10 +1,9 @@
 {
-	"name": "mono-website",
-	"short_name": "mono-website",
+	"name": "ogün babacan",
+	"short_name": "ogunb",
 	"start_url": "/",
 	"display": "standalone",
 	"orientation": "portrait",
 	"background_color": "#fff",
-	"theme_color": "#000",
-	"icons": []
+	"theme_color": "#000"
 }
