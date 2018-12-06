@@ -33,10 +33,13 @@ class Showroom extends Component {
 			<section className={style.showroom}>
 				<div className={style.showroom__title}>
 					<p>
-						this is the showroom has / <em>(might have)</em> blog posts,
+						this is the showroom. it has / <em>(might have)</em> blog posts,
 						projects etc.
 					</p>
-					<p>mostly things on my gitHub are here as well.</p>
+					<p>
+						mostly things on my <a href="https://github.com/ogunb">gitHub</a>{' '}
+						are here as well.
+					</p>
 				</div>
 				<div className={style.showroom__posts}>
 					{posts.map(post => (
