@@ -1,6 +1,4 @@
-const sleepy = `![sleepy](https://raw.githubusercontent.com/ogunb/sleepy/master/sleepy.jpg "Sleepy")
-
-## **sleepy💤**
+const sleepy = `## **sleepy💤**
 
 sleepy is a sleep-cycle calculator.
 [git Repo](https://github.com/ogunb/sleepy/)

@@ -5,92 +5,106 @@ import style from './style.css';
 import markdownStyle from './markdown.css';
 
 class Post extends Component {
-  state = {
-    post: null,
-    isOpen: false,
-  };
+	state = {
+		post: null,
+		isOpen: false,
+		img: null
+	};
 
-  async getPostBody(id) {
-    const post = await import(`./postContent/${id}`).then(body => body.default);
-    this.setState({
-      post,
-      isOpen: true,
-    });
-  }
+	async componentDidMount() {
+		const { id } = this.props;
+		if (id === 2) return;
+		const img = await import(`../../../assets/postAssets/${id}.jpg`).then(
+			data => data
+		);
+		this.setState({
+			...this.state,
+			img
+		});
+	}
 
-  closePostBody = () => {
-    this.setState({ isOpen: false });
-  };
+	async getPostBody(id) {
+		const post = await import(`./postContent/${id}`).then(body => body.default);
+		this.setState({
+			post,
+			isOpen: true
+		});
+	}
 
-  renderButton() {
-    const { isOpen } = this.state;
-    //! HOVER EFFECT
-    //! HOVER EFFECT
-    //! HOVER EFFECT
-    let button;
-    if (!isOpen) {
-      button = (
-        <button
-          type="button"
-          onClick={() => this.getPostBody(this.props.id)}
-          className={style.showroom__post__button}
-        >
-          \/
-        </button>
-      );
-    } else {
-      button = (
-        <button
-          type="button"
-          onClick={this.closePostBody}
-          className={`${style.showroom__post__button} ${
-            style.showroom__post__button_open
-          }`}
-        >
-          \/
-        </button>
-      );
-    }
+	closePostBody = () => {
+		this.setState({ isOpen: false });
+	};
 
-    return button;
-  }
+	renderButton() {
+		const { isOpen } = this.state;
+		//! HOVER EFFECT
+		//! HOVER EFFECT
+		//! HOVER EFFECT
+		let button;
+		if (!isOpen) {
+			button = (
+				<button
+					type="button"
+					onClick={() => this.getPostBody(this.props.id)}
+					className={style.showroom__post__button}
+				>
+					\/
+				</button>
+			);
+		} else {
+			button = (
+				<button
+					type="button"
+					onClick={this.closePostBody}
+					className={`${style.showroom__post__button} ${
+						style.showroom__post__button_open
+					}`}
+				>
+					\/
+				</button>
+			);
+		}
 
-  renderBody() {
-    const { isOpen, post } = this.state;
-    if (isOpen) {
-      return (
-        <div
-          className={`${markdownStyle.showroom__post__body} ${
-            style.showroom__post__body
-          }`}
-        >
-          <Markdown markdown={post} />
-        </div>
-      );
-    }
-    return (
-      <div
-        className={`${markdownStyle.showroom__post__body} ${
-          style.showroom__post__body
-        }`}
-      />
-    );
-  }
-  /* eslint-disable-next-line */
+		return button;
+	}
+
+	renderBody() {
+		const { isOpen, post, img } = this.state;
+		if (isOpen) {
+			return (
+				<div
+					className={`${markdownStyle.showroom__post__body} ${
+						style.showroom__post__body
+					}`}
+				>
+					{img !== null ? <img src={img} /> : ''}
+					<Markdown markdown={post} />
+				</div>
+			);
+		}
+		return (
+			<div
+				className={`${markdownStyle.showroom__post__body} ${
+					style.showroom__post__body
+				}`}
+			/>
+		);
+	}
+	/* eslint-disable-next-line */
 	render({ title, subtitle, id }, { isOpen, post }) {
-    return (
-      <div
-        className={`${style.showroom__post} ${
-          isOpen ? style.post_body_open : ''
-        }`}
-      >
-        <p className={style.showroom__post__title}>{title}</p>
-        <p>{subtitle}</p>
-        {this.renderButton()}
-        {this.renderBody()}
-      </div>
-    );
-  }
+		return (
+			<div
+				className={`${style.showroom__post} ${
+					isOpen ? style.post_body_open : ''
+				}`}
+			>
+				<p className={style.showroom__post__title}>{title}</p>
+				<p>{subtitle}</p>
+				{this.renderButton()}
+				{this.renderBody()}
+			</div>
+		);
+	}
 }
 
 export default Post;
