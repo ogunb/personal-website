@@ -1,8 +1,8 @@
 import { h, Component } from 'preact';
-import Markdown from 'preact-markdown';
 
 import style from './style.css';
-import markdownStyle from './markdown.css';
+
+import PostBody from './PostBody';
 
 class Post extends Component {
 	state = {
@@ -37,9 +37,6 @@ class Post extends Component {
 
 	renderButton() {
 		const { isOpen } = this.state;
-		//! HOVER EFFECT
-		//! HOVER EFFECT
-		//! HOVER EFFECT
 		let button;
 		if (!isOpen) {
 			button = (
@@ -67,31 +64,8 @@ class Post extends Component {
 
 		return button;
 	}
-
-	renderBody() {
-		const { isOpen, post, img } = this.state;
-		if (isOpen) {
-			return (
-				<div
-					className={`${markdownStyle.showroom__post__body} ${
-						style.showroom__post__body
-					}`}
-				>
-					{img !== null ? <img src={img} /> : ''}
-					<Markdown markdown={post} />
-				</div>
-			);
-		}
-		return (
-			<div
-				className={`${markdownStyle.showroom__post__body} ${
-					style.showroom__post__body
-				}`}
-			/>
-		);
-	}
 	/* eslint-disable-next-line */
-	render({ title, subtitle, id }, { isOpen, post }) {
+	render({ title, subtitle, id }, { isOpen, post, img }) {
 		return (
 			<div
 				className={`${style.showroom__post} ${
@@ -101,7 +75,7 @@ class Post extends Component {
 				<p className={style.showroom__post__title}>{title}</p>
 				<p>{subtitle}</p>
 				{this.renderButton()}
-				{this.renderBody()}
+				<PostBody isOpen={isOpen} post={post} img={img} />
 			</div>
 		);
 	}
