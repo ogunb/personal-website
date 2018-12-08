@@ -62,6 +62,14 @@
 .showroom__post__body * {
 	font-size: 1.3rem;
 }
+@media screen and (min-width: 2000px) {
+	.showroom__post {
+		max-width: 1350px;
+	}
+	.showroom__post__body * {
+		font-size: 2rem;
+	}
+}
 @media screen and (max-width: 825px) {
 	.showroom__post {
 		grid-template-columns: 14rem auto 8rem;

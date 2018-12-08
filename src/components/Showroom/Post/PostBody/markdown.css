@@ -64,7 +64,6 @@
 .showroom__post__body .highlight pre {
 	background-color: #f8f8f8;
 	border: 1px solid #ccc;
-	font-size: 13px;
 	line-height: 19px;
 	overflow: auto;
 	padding: 6px 10px;
@@ -73,7 +72,6 @@
 .showroom__post__body pre {
 	background-color: #f8f8f8;
 	border: 1px solid #ccc;
-	font-size: 13px;
 	line-height: 19px;
 	overflow: auto;
 	padding: 6px 10px;
