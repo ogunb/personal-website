@@ -14,6 +14,7 @@
 .hero__top {
 	display: flex;
 	align-items: flex-end;
+	margin-bottom: 3rem;
 }
 .hero__name {
 	font-family: 'Special Elite', cursive;
@@ -37,20 +38,32 @@
 	margin-top: 0;
 }
 
+@media screen and (min-width: 1920px) {
+	.hero {
+		justify-content: center;
+	}
+	.hero__top {
+		margin-bottom: 7%;
+	}
+}
 @media screen and (max-width: 940px) {
 	.hero__name {
 		font-size: 10rem;
 	}
 }
 @media screen and (max-width: 815px) {
+	.hero {
+		justify-content: space-around;
+	}
 	.hero__name {
 		font-size: 8rem;
-		transform: none;
+		transform: rotate(-3deg);
 	}
 	.hero__top {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: 0;
 	}
 }
 @media screen and (max-width: 680px) {
