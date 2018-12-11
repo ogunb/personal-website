@@ -1,5 +1,10 @@
 const posts = [
 	{
+		id: 3,
+		title: 'practice',
+		subtitle: 'mandatory to-do list.'
+	},
+	{
 		id: 2,
 		title: 'my-notes',
 		subtitle: 'the big words of js: recursion and call stack'
