@@ -1,4 +1,7 @@
-const recursion = `There are a lot of alien words for us non-Computer Science graduates out there. If you are like me, chances are you were intimidated by how mouthful they are. In this blog post, we’ll cover Recursion, and strip that f\*cker to it’s simplest form.
+const recursion = `
+## recursion and call stack
+
+There are a lot of alien words for us non-Computer Science graduates out there. If you are like me, chances are you were intimidated by how mouthful they are. In this blog post, we’ll cover Recursion, and strip that f\*cker to it’s simplest form.
 
 _Note that you can find the sources utilized in this blog post at the bottom of the page. It’s always better to have unfiltered information, so go check them out too if you like._
 

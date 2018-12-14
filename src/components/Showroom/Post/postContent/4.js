@@ -1,12 +1,12 @@
 // prettier-ignore
 const colorPicker = `
-# Voice Controlled Color Picker 🎨
+## Voice Controlled Color Picker 🎨
 
 _Made with the browsers native \`SpeechRecognition\` API._
 
 Pick colors, using voice commands. You will use RGB(Red, Green, Blue) colors to add to/subtract from the selected color.
 
-## Command List
+### Command List
 
 \`$rgb-colors: [red, green, blue];\`
 
