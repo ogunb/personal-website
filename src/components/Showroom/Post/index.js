@@ -13,7 +13,7 @@ class Post extends Component {
 
 	async componentDidMount() {
 		const { id } = this.props;
-		if (id === 2) return;
+		if (id === 2 || id === 4) return;
 		const img = await import(`../../../assets/postAssets/${id}.jpg`).then(
 			data => data
 		);
