@@ -2,9 +2,17 @@
   <div class="hero">
     <div class="hero__top">
       <h1 class="hero__name">
-        <span v-for="(letter, index) in name" v-bind:key="'fistName' + index">{{ letter }}</span>
+        <span
+          class="hero__name__letter"
+          v-for="(letter, index) in name"
+          v-bind:key="'fistName' + index"
+        >{{ letter }}</span>
         <br>
-        <span v-for="(letter, index) in lastName" v-bind:key="'lastName' + index">{{ letter }}</span>
+        <span
+          class="hero__name__letter"
+          v-for="(letter, index) in lastName"
+          v-bind:key="'lastName' + index"
+        >{{ letter }}</span>
       </h1>
       <div class="hero__occupation">
         <h2>javascript</h2>
@@ -65,7 +73,7 @@ export default {
   cursor: default;
 }
 .hero__name__letter:hover {
-  transform: translateY(20px);
+  transform: translateY(10px) scale(0.95);
 }
 .hero__bottom {
   display: flex;
@@ -127,7 +135,7 @@ export default {
   margin-bottom: -10rem;
 }
 .hero__occupation:hover {
-  transform: scale(0.85);
+  transform: scale(0.83) rotate(3deg);
 }
 
 @media screen and (max-width: 815px) {
