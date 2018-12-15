@@ -214,5 +214,9 @@ a {
   font-weight: 400;
   font-size: 1.6rem;
   color: var(--dark);
+  transition: transform 1s var(--snap);
+}
+a:hover {
+  transform: scale(0.95) translateY(3px);
 }
 </style>

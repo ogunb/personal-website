@@ -13,5 +13,15 @@ export default new Router({
       name: 'home',
       component: Home,
     },
+    {
+      path: '/about',
+      name: 'about',
+      component: Home,
+    },
+    {
+      path: '/post/:postId',
+      name: 'post',
+      component: Home,
+    },
   ],
 });

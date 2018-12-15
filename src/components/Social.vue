@@ -73,11 +73,12 @@ export default {
   width: 30px;
   height: 30px;
   fill: #c4c4c4;
-  transition: fill 2s var(--snap);
+  transition: fill 1.5s var(--snap), transform 1s var(--snap);
   cursor: pointer;
 }
 .social svg:hover {
   fill: #000;
+  transform: scale(0.95) translateY(5px);
 }
 </style>
 

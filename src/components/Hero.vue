@@ -135,7 +135,7 @@ export default {
   margin-bottom: -10rem;
 }
 .hero__occupation:hover {
-  transform: scale(0.83) rotate(3deg);
+  transform: scale(0.79) rotate(3deg) translateY(7px);
 }
 
 @media screen and (max-width: 815px) {
