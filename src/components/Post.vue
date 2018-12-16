@@ -1,35 +1,47 @@
 <template>
-  <div class="showroom__post" v-bind:class="{ post__body__open: isOpen }">
+  <div class="showroom__post" v-bind:class="{showroom__post__open: isOpen}" ref="post">
     <p class="showroom__post__title">{{ title }}</p>
-    <p class="showroom__post__subtitle" @click="changeUrl">{{ subtitle }}</p>
+    <p class="showroom__post__subtitle" @click="handleClick">{{ subtitle }}</p>
     <button
-      @click="changeUrl"
+      @click="handleClick"
       class="showroom__post__button"
       v-bind:class="{ showroom__post__button__open: isOpen }"
     ></button>
-    <post-body v-bind="{ isOpen }"/>
+    <transition name="showroom__post__body">
+      <div v-if="isOpen" class="showroom__post__body" v-html="post"></div>
+    </transition>
   </div>
 </template>
 
 <script>
-import PostBody from "./PostBody.vue";
+import marked from "marked";
 export default {
   name: "post",
-  components: {
-    PostBody
-  },
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      post: ""
     };
   },
   props: ["title", "subtitle", "id"],
-  computed: {
-    postNameToLink: function() {
-      return this.subtitle.split(" ").join("-");
+  mounted: function() {
+    if (this.$route.params.postId && this.$route.params.postId == this.id) {
+      this.handleClick();
+      window.scrollTo({
+        behavior: "smooth",
+        top: this.$refs.post.offsetTop + window.innerHeight
+      });
     }
   },
   methods: {
+    handleClick() {
+      this.markdownPost();
+      this.changeUrl();
+    },
+    markdownPost: async function() {
+      const markdown = await import(`../assets/posts/${this.id}.js`);
+      this.post = marked(markdown.default);
+    },
     changeUrl: function() {
       this.isOpen = !this.isOpen;
       if (this.isOpen) {
@@ -59,15 +71,16 @@ export default {
   box-sizing: border-box;
   border: 4px solid var(--dark);
   border-bottom: none;
-  transition: max-height 1s ease-in;
-  max-height: 8rem;
+  max-height: 6.4rem;
+  transition: max-height 0.5s var(--snap);
 }
-.showroom__post.post__body__open {
+.showroom__post.showroom__post__open {
+  transition: max-height 0.5s ease-in;
+  max-height: 330rem;
   background: url(../assets/showroom-bottom.svg);
   background-size: 100%;
   background-repeat: repeat-x;
   background-position: 100% 100%;
-  max-height: 700rem;
 }
 .showroom__post * {
   margin: 0;
@@ -141,18 +154,19 @@ export default {
   grid-column: 1 / 4;
   line-height: 2.5;
   padding: 0 12%;
-  opacity: 0;
-  transition: opacity 5s var(--snap);
+  opacity: 1;
+  transition: opacity 0.3s linear;
   max-width: 70vw;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
 }
 .showroom__post__body img {
   margin: 20px auto;
   display: flex;
 }
-.showroom__post.post__body__open .showroom__post__body {
-  opacity: 1;
-  padding-bottom: 5rem;
-  padding-top: 5rem;
+.showroom__post__body-enter,
+.showroom__post__body-leave-active {
+  opacity: 0;
 }
 @media screen and (min-width: 2000px) {
   .showroom__post {
@@ -168,5 +182,89 @@ export default {
   .showroom__post {
     grid-template-columns: 11rem auto 5rem;
   }
+}
+.showroom__post__body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+.showroom__post__body p,
+.showroom__post__body blockquote,
+.showroom__post__body ul,
+.showroom__post__body ol,
+.showroom__post__body dl,
+.showroom__post__body li,
+.showroom__post__body table,
+.showroom__post__body pre {
+  margin: 15px 0;
+  line-height: 2;
+  font-size: 1.6rem;
+}
+.showroom__post__body ul,
+.showroom__post__body ol {
+  padding-left: 30px;
+}
+.showroom__post__body blockquote {
+  border-left: 4px solid #ddd;
+  padding: 0 15px;
+  color: #777;
+}
+.showroom__post__body blockquote > :first-child {
+  margin-top: 0;
+}
+.showroom__post__body blockquote > :last-child {
+  margin-bottom: 0;
+}
+.showroom__post__body img {
+  max-width: 100%;
+}
+.showroom__post__body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.showroom__post__body span.align-center > span {
+  display: block;
+  overflow: hidden;
+  margin: 13px auto 0;
+  text-align: center;
+}
+.showroom__post__body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+.showroom__post__body code,
+.showroom__post__body tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+.showroom__post__body pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+.showroom__post__body .highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+.showroom__post__body pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+.showroom__post__body pre code,
+.showroom__post__body pre tt {
+  background-color: transparent;
+  border: none;
 }
 </style>
