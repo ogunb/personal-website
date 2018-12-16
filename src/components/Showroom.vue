@@ -31,18 +31,18 @@ export default {
       posts: [
         {
           id: 4,
-          title: "practice",
+          title: "color",
           subtitle: "voice controlled rgb color blender."
+        },
+        {
+          id: 3,
+          title: "to-do",
+          subtitle: "mandatory to-do list."
         },
         {
           id: 2,
           title: "my-notes",
           subtitle: "the big words of js: recursion and call stack"
-        },
-        {
-          id: 3,
-          title: "practice",
-          subtitle: "mandatory to-do list."
         },
         {
           id: 1,
@@ -79,6 +79,7 @@ export default {
 @media screen and (max-width: 1075px) {
   .showroom {
     padding: 0 3%;
+    margin: 4rem 0 1rem 0;
   }
 }
 </style>

@@ -1,14 +1,16 @@
 <template>
   <div class="wrapper">
     <hero></hero>
+    <transition name="about">
+      <about v-if="$route.path === '/about'"></about>
+    </transition>
+    <showroom></showroom>
     <router-link
       to="/about"
       type="button"
       class="showroom__aboutPage"
       ref="aboutButton"
     >learn more about me</router-link>
-    <about v-if="$route.name === 'about'"></about>
-    <showroom></showroom>
     <footer-comp></footer-comp>
   </div>
 </template>
@@ -28,16 +30,18 @@ export default {
     About
   },
   mounted() {
-    window.addEventListener(
-      "scroll",
-      this.debounce(() => {
-        if (window.pageYOffset > window.innerHeight / 2) {
-          this.$refs.aboutButton.$el.style.opacity = 1;
-        } else {
-          this.$refs.aboutButton.$el.style.opacity = 0;
-        }
-      }, 100)
-    );
+    if (window.innerHeight < 1075) {
+      window.addEventListener(
+        "scroll",
+        this.debounce(() => {
+          if (window.pageYOffset > window.innerHeight / 2) {
+            this.$refs.aboutButton.$el.style.opacity = 1;
+          } else {
+            this.$refs.aboutButton.$el.style.opacity = 0;
+          }
+        }, 100)
+      );
+    }
   },
   methods: {
     debounce: function(callback, time) {
@@ -67,21 +71,31 @@ export default {
   border: none;
   z-index: 5;
   opacity: 0;
+  text-decoration: none;
 }
 .showroom__aboutPage:hover {
   transform: rotate(90deg) translateY(-10px);
+}
+.showroom__aboutPage.router-link-active {
+  transform: rotate(90deg) translateY(-15px);
 }
 @media screen and (max-width: 1075px) {
   .showroom__aboutPage {
     display: block;
     position: relative;
+    margin: 2rem auto 2rem auto;
     transform: none;
-    right: 0;
-    top: 0;
-    margin: 2rem auto 0 auto;
     z-index: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transition: transform 1s var(--snap);
+    opacity: 1;
   }
   .showroom__aboutPage:hover {
+    transform: scale(0.95) translateY(3px);
+  }
+  .showroom__aboutPage.router-link-active {
     transform: none;
   }
 }

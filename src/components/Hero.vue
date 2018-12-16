@@ -82,9 +82,6 @@ export default {
 }
 
 @media screen and (min-width: 1920px) {
-  .hero {
-    justify-content: center;
-  }
   .hero__top {
     margin-bottom: 7%;
   }
@@ -110,16 +107,18 @@ export default {
   }
 }
 @media screen and (max-width: 680px) {
+  .hero {
+    background-size: 200%;
+    background-position: left 102%;
+  }
   .hero__bottom {
     margin-top: -20vh;
   }
 }
-@media screen and (max-width: 355px) {
-  .hero__name {
-    font-size: 6.5rem;
+@media screen and (max-width: 370px) {
+  .hero {
+    background-size: 400%;
   }
-}
-@media screen and (max-width: 300px) {
   .hero__name {
     font-size: 5rem;
   }

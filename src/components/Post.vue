@@ -175,12 +175,39 @@ export default {
 }
 @media screen and (max-width: 825px) {
   .showroom__post {
-    grid-template-columns: 14rem auto 8rem;
+    grid-template-columns: 14rem auto 12rem;
+  }
+}
+@media screen and (max-width: 685px) {
+  .showroom__post {
+    grid-template-columns: 0 auto 12rem;
+    grid-gap: 1rem;
+  }
+  .showroom__post__title {
+    visibility: hidden;
   }
 }
 @media screen and (max-width: 505px) {
   .showroom__post {
-    grid-template-columns: 11rem auto 5rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 16rem;
+  }
+  .showroom__post__body {
+    padding: 1rem 0 1rem 0;
+  }
+  .showroom__post__title {
+    display: none;
+  }
+  .showroom__post__subtitle {
+    padding: 2rem;
+  }
+  .showroom__post__button {
+    width: 100%;
+    margin: 0;
+  }
+  .showroom__post__button:hover {
+    transform: none;
   }
 }
 .showroom__post__body a {
