@@ -1,5 +1,10 @@
 <template>
-  <div class="showroom__post" v-bind:class="{showroom__post__open: isOpen}" ref="post">
+  <div
+    class="showroom__post"
+    v-bind:class="{showroom__post__open: isOpen}"
+    v-bind:id="postId"
+    ref="post"
+  >
     <p class="showroom__post__title">{{ title }}</p>
     <p class="showroom__post__subtitle" @click="handleClick">{{ subtitle }}</p>
     <button
@@ -20,7 +25,8 @@ export default {
   data() {
     return {
       isOpen: false,
-      post: ""
+      post: "",
+      postId: `post-${this.id}`
     };
   },
   props: ["title", "subtitle", "id"],
@@ -151,9 +157,10 @@ export default {
   transform: translate(calc(-50% + 5px)) rotate(-13deg);
 }
 .showroom__post__body {
+  text-align: justify;
   grid-column: 1 / 4;
   line-height: 2.5;
-  padding: 0 12%;
+  padding: 0 12% 0 10%;
   opacity: 1;
   transition: opacity 0.3s linear;
   max-width: 70vw;
@@ -173,12 +180,23 @@ export default {
     max-width: 1350px;
   }
 }
+@media screen and (max-width: 1060px) {
+  #post-2.showroom__post__open {
+    max-height: 400rem;
+  }
+}
 @media screen and (max-width: 825px) {
+  #post-2.showroom__post__open {
+    max-height: 470rem;
+  }
   .showroom__post {
     grid-template-columns: 14rem auto 12rem;
   }
 }
 @media screen and (max-width: 685px) {
+  #post-2.showroom__post__open {
+    max-height: 550rem;
+  }
   .showroom__post {
     grid-template-columns: 0 auto 12rem;
     grid-gap: 1rem;
@@ -187,7 +205,11 @@ export default {
     visibility: hidden;
   }
 }
+
 @media screen and (max-width: 505px) {
+  #post-2.showroom__post__open {
+    max-height: 100%;
+  }
   .showroom__post {
     display: flex;
     flex-direction: column;
@@ -205,6 +227,7 @@ export default {
   .showroom__post__button {
     width: 100%;
     margin: 0;
+    min-height: 6rem;
   }
   .showroom__post__button:hover {
     transform: none;
@@ -293,5 +316,22 @@ export default {
 .showroom__post__body pre tt {
   background-color: transparent;
   border: none;
+}
+@media screen and (max-width: 450px) {
+  .showroom__post__body h1 {
+    font-size: 3.2rem;
+  }
+  .showroom__post__body h2 {
+    font-size: 2rem;
+  }
+  #post-4 h2 {
+    display: none;
+  }
+  .showroom__post__body code {
+    font-size: 1rem;
+  }
+  .showroom__post__body table {
+    display: none;
+  }
 }
 </style>
