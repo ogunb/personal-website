@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="hero__bottom">
-      <p>i'm ogün. a frontend js developer with a design background.</p>
+      <p>i'm ogün. a frontend developer with a design background.</p>
       <social></social>
       <a href="mailto:babacanogun@gmail.com">babacanogun@gmail.com</a>
     </div>

@@ -4,7 +4,9 @@
 	"private": true,
 	"scripts": {
 		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build"
+		"build": "vue-cli-service build",
+		"deploy": "yarn build && now && now alias",
+		"now-build": "npm run build"
 	},
 	"dependencies": {
 		"marked": "^0.5.2",
