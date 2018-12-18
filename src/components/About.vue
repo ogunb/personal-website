@@ -28,7 +28,9 @@
       </p>
     </div>
     <div class="about__contact">
-      <p>So yeah, see you around I guess?:</p>
+      <em>
+        <p>So yeah, see you around I guess?:</p>
+      </em>
       <a
         href="https://www.dropbox.com/s/yc1bjafbax0i0qj/og%C3%BCn-babacan-cv-en.pdf?dl=0"
         target="_blank"
@@ -53,6 +55,12 @@ export default {
   name: "about",
   components: {
     Social
+  },
+  mounted: function() {
+    document.body.style.overflowY = "hidden";
+  },
+  destroyed: function() {
+    document.body.style.overflowY = "scroll";
   },
   methods: {
     closeAbout: function() {
@@ -85,8 +93,21 @@ export default {
 .about-enter {
   transform: translateX(100%);
 }
+.about__paragraph {
+  height: 90%;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  overflow-y: scroll;
+  scrollbar-color: var(--light) var(--dark);
+}
+.about__paragraph::-webkit-scrollbar {
+  background: var(--dark);
+}
+.about__paragraph::-webkit-scrollbar-thumb {
+  background-color: var(--light);
+}
 .about__paragraph p {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 .about__close {
   position: absolute;
@@ -111,6 +132,11 @@ export default {
   .about {
     max-width: 100%;
     overflow-y: scroll;
+  }
+  .about__paragraph {
+    overflow-y: hidden;
+    padding-right: 0;
+    padding-top: 1rem;
   }
 }
 </style>

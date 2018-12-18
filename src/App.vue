@@ -12,6 +12,16 @@
   --snap: cubic-bezier(0.06, 0.975, 0.195, 0.985);
   font-family: "Space Grotesk", monospace;
   font-size: 62.5%;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark);
+  outline: 1px solid slategrey;
 }
 ::-moz-selection {
   color: #fff;
