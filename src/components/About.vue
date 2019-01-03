@@ -3,7 +3,7 @@
     <button type="button" class="about__close" @click="closeAbout">X</button>
     <h3 class="about__title">i'm ogün,</h3>
     <div class="about__paragraph">
-     <p>A 24 years old Front-end Developer from Eskişehir, Turkey. I’m a “techie” guy and I really like learning about techie stuff.
+     <p>A 24 years old Front-end Developer from Tekirdag, Turkey. I’m a “techie” guy and I really like learning about techie stuff.
 </p>
      <p>I've studied Communication Design and Management in Eskişehir Anadolu University. Consistent with the department I studied, I focused on UX/UI design and I also taught myself HTML and CSS. At first, I wasn’t intending for it to be anything more than prototyping what I designed, but it didn’t satisfy me.</p>
      <p>I felt like being a designer didn’t suit me, something was just missing. Learning Javascript has made me realize that programming offers me something from the past. It's provided me with the opportunity of finding material solutions to problems and it felt like I was 10 again, playing video games. This now defines who I’m and who I want to be.</p>
