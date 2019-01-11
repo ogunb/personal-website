@@ -214,6 +214,7 @@ export default {
     display: flex;
     flex-direction: column;
     max-height: 16rem;
+    text-align: center;
   }
   .showroom__post__body {
     padding: 1rem 0 1rem 0;

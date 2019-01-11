@@ -30,6 +30,11 @@ export default {
     return {
       posts: [
         {
+          id: 5,
+          title: "wl-tracker",
+          subtitle: "weightlifting journal to help with progressive overload."
+        },
+        {
           id: 4,
           title: "color",
           subtitle: "voice controlled rgb color blender."
