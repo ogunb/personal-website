@@ -46,10 +46,10 @@ export default {
 
 <style>
 .hero {
-  background: url(../assets/hero-bg.jpg);
+  /* background: url(../assets/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: 100% 102%;
-  background-size: 100%;
+  background-size: 100%; */
   position: relative;
   height: 100vh;
   width: 100%;
@@ -79,6 +79,10 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: -5rem;
+}
+.hero__bottom a {
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 1920px) {

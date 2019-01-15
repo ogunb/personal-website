@@ -1,6 +1,6 @@
 <template>
   <div class="social">
-    <a href="https://instagram.com/ogunb" target="_blank" rel="noopener noreferrer">
+    <!-- <a href="https://instagram.com/ogunb" target="_blank" rel="noopener noreferrer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.077 36.077">
         <g transform="translate(0.039 0.038)">
           <path
@@ -16,7 +16,7 @@
           <ellipse class="a" cx="2" cy="2.5" rx="2" ry="2.5" transform="translate(26 6)"></ellipse>
         </g>
       </svg>
-    </a>
+    </a> -->
     <a href="https://github.com/ogunb" target="_blank" rel="noopener noreferrer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.002 36.12">
         <path
