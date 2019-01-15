@@ -75,13 +75,13 @@ This might seem confusing at first, so let’s go through our call stack with fa
 
 > [ factorial(1) ] → Fifth Call: Since it’s less than 2, it resolves itself and pops out of the stack, returning 1.
 >
-> [ factorial(2) ] → Forth Call: With the resolved “factorial(num — 1)” call, now the “num - factorial(num — 1)” operation is equal to “2 - 1”, thus resolving and returning 2.
+> [ factorial(2) ] → Forth Call: With the resolved “factorial(num — 1)” call, now the “num - factorial(num — 1)” operation is equal to “2 * 1”, thus resolving and returning 2.
 >
-> [ factorial(3) ] → Third Call: Same thing with this too, “num - factorial(num — 1)” : “3 - 2 = 6”
+> [ factorial(3) ] → Third Call: Same thing with this too, “num - factorial(num — 1)” : “3 * 2 = 6”
 >
-> [ factorial(4) ] → Second Call => 4 - 6 = 24
+> [ factorial(4) ] → Second Call => 4 * 6 = 24
 >
-> [ factorial(5) ] → First Call will yield the result of 5 - 24, which is 120.
+> [ factorial(5) ] → First Call will yield the result of 5 * 24, which is 120.
 >
 > _see live here: [https://codepen.io/ogunb/pen/jQbGrv](CodePen/ogunb))_
 
