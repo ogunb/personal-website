@@ -1,3 +1,3 @@
 # Personal website.
 
-[It's monochrome.](https://ogunb.me)
+[It's monochrome.](https://www.ogunb.me)
